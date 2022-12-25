@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "rootDir": ".",
+    "target": "ES2022",
+    "module": "commonjs",
+    "outDir": "dist",
+    "baseUrl": ".",
+    "jsx": "preserve",
+    "importHelpers": true,
+    "moduleResolution": "node",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "@/*": ["./lib/*"],
+    },
+  },
+  "files": ["main.ts"],
+  "include": ["main.ts", "./lib/**/*"],
+  "exclude": ["node_modules"]
+}

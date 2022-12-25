@@ -1,0 +1,17 @@
+{
+  "$schema": "node_modules/lerna/schemas/lerna-schema.json",
+  "version": "independent",
+  "packages": [
+    "packages/*"
+  ],
+  "npmClient": "yarn",
+  "useWorkspaces": true,
+  "useNx": true,
+  "command": {
+    "bootstrap": {
+      "core": true,
+      "backend": true,
+      "frontend": true
+    }
+  }
+}

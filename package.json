@@ -1,0 +1,28 @@
+{
+  "name": "wp",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "bootstrap": "lerna bootstrap",
+    "setup": "sh bin/setup.sh",
+    "test": "jest --init"
+  },
+  "author": {
+    "name": "willy",
+    "email": "willy8742891@gmail.com"
+  },
+  "license": "ISC",
+  "engines": {
+    "node": ">=18",
+    "npm": ">=8"
+  },
+  "workspaces": [
+    "packages/**/*"
+  ],
+  "devDependencies": {
+    "lerna": "^6.0.3",
+    "npm-run-all": "^4.1.5"
+  }
+}

@@ -1,0 +1,38 @@
+version: "3.7"
+
+services:
+  backend:
+    build: .
+    command: >
+      yarn setup
+    ports:
+      - "8011:8080"
+    volumes:
+      - .:/app
+    depends_on:
+      - mysql
+    networks:
+      - mysql
+    env_file: .env
+  postgres:
+    image: postgres:14
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: wp
+    networks:
+      - backend
+  mysql:
+    image: mysql:8
+    restart: always
+    environment:
+      MYSQL_DATABASE: wp
+      MYSQL_USER: rooy
+      MYSQL_PASSWORD: cpy775tw
+      MYSQL_ROOT_HOST: "172.0.0.1"
+      MYSQL_ROOT_PASSWORD: 3519
+    networks:
+      - backend
+networks:
+  backend:
